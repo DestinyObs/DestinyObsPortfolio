@@ -7,6 +7,25 @@ hamburger.addEventListener('click', () => {
 	hamburger.classList.toggle('active');
 	mobile_menu.classList.toggle('active');
 });
+    /*------------------
+        Preloader
+    --------------------*/
+    $(window).on('load', function () {
+        $(".loader").fadeOut();
+        $("#preloder").delay(150).fadeOut("slow");
+
+        /*------------------
+            Product filter
+        --------------------*/
+        $('.filter__controls li').on('click', function () {
+            $('.filter__controls li').removeClass('active');
+            $(this).addClass('active');
+        });
+        if ($('.property__gallery').length > 0) {
+            var containerEl = document.querySelector('.property__gallery');
+            var mixer = mixitup(containerEl);
+        }
+    });
 
 document.addEventListener('scroll', () => {
 	var scroll_position = window.scrollY;
