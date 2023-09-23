@@ -7,14 +7,7 @@ hamburger.addEventListener('click', () => {
 	hamburger.classList.toggle('active');
 	mobile_menu.classList.toggle('active');
 });
-    /*------------------
-        Preloader
-    --------------------*/
-    $(window).on('load', function () {
-        $(".loader").fadeOut();
-        $("#preloder").delay(150).fadeOut("slow");
 
-    });
 
 document.addEventListener('scroll', () => {
 	var scroll_position = window.scrollY;
@@ -30,4 +23,18 @@ menu_item.forEach((item) => {
 		hamburger.classList.toggle('active');
 		mobile_menu.classList.toggle('active');
 	});
+});
+
+    // /*------------------
+    //     Preloader
+    // --------------------*/
+    // $(window).on('load', function () {
+    //     $(".loader").fadeOut();
+    //     $("#preloder").delay(150).fadeOut("slow");
+
+    // });
+
+	// JavaScript to hide preloader when the page is loaded
+window.addEventListener("load", function () {
+    document.body.classList.add("loaded");
 });
