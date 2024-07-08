@@ -9,6 +9,30 @@ html {
 	font-family: 'Montserrat', sans-serif;
 	scroll-behavior: smooth;
 }
+
+
+
+
+.proficiency-section {
+	overflow: hidden;
+	white-space: nowrap;
+	box-sizing: border-box;
+  }
+  .proficiency-container {
+	display: inline-block;
+	animation: slide 18s linear infinite;
+  }
+  .proficiency-container img {
+	width: 100px;
+	height: auto;
+	margin: 0 50px;
+  }
+  @keyframes slide {
+	from { transform: translateX(100%); }
+	to { transform: translateX(-100%); }
+  }
+
+
 a {
 	text-decoration: none;
 }
